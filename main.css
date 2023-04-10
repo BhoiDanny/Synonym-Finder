@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1b3652;
+    --secondary-color: #1f4364;
+    --trans-1: rgba(255, 255, 255, 0.7);
+    --trans-2: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    background: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color));
+    border-color: var(--secondary-color) !important;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color));
+}
+
+
+.cover {
+    background-color: white;
+    min-height: 70vh;
+    width: 55%;
+    background: linear-gradient(to right bottom, var(--trans-1), var(--trans-2));
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 3;
+}
+
+.shape-1,.shape-2 {
+    background: white;
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    border-radius: 10px 119px 9px 120px;
+        -webkit-border-radius: 10px 119px 9px 120px;
+        -moz-border-radius: 10px 119px 9px 120px;
+    z-index: 2;
+}
+
+.shape-1 {
+    top: 10%;
+    left: 15%;
+    background: linear-gradient(to right bottom, var(--trans-1), var(--trans-2));
+}
+
+.shape-2 {
+    right: 15%;
+    bottom: 10%;
+    background: linear-gradient(to right bottom, var(--trans-2), var(--trans-1));
+}
+
+.head h1 {
+    color: var(--secondary-color);
+}
+
+label {
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: var(--secondary-color);
+    background: linear-gradient(to right bottom, var(--trans-2), var(--trans-1));
+    border-radius: 1rem;
+}
+
+.input::placeholder {
+    color: var(--secondary-color);
+}
+
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.screen{
+    color: var(--secondary-color);
+    background: linear-gradient(to right bottom, var(--trans-2), var(--trans-1));
+    border-radius: 1rem;
+    padding: 10px;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 25px;
+}
+
+.screen ul {
+    list-style: circle;
+    padding: 20px;
+}
