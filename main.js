@@ -8,7 +8,7 @@ toastr.options = {
     "debug": false,
     "newestOnTop": false,
     "progressBar": true,
-    "positionClass": "toast-bottom-right",
+    "positionClass": "toast-top-right",
     "preventDuplicates": true,
     "onclick": null,
     "showDuration": "300",
@@ -59,6 +59,22 @@ $st('input#word').on('keyup', function($e) {
     });
 });
 
+//after typing in the number of words to display input field and delay for 2 seconds
+$st('input#word_no').on('keyup', function($e) {
+    $e.stopPropagation();
+    let $this = $st(this);
+
+    if(!$st('input#word').val() == "") {
+        $this.clearQueue();
+        $this.delay(2000).queue(function(){
+            if(isAutoSearch()) {
+                $st('form.syn-form').submit();
+            }
+            $this.dequeue();
+        });
+    }
+});
+
 
 
 $st('form.syn-form').on('submit', function($e) {
@@ -67,10 +83,9 @@ $st('form.syn-form').on('submit', function($e) {
     let $word = $st($this).find('input#word').val();
     let $word_no = $st($this).find('input#word_no').val();
     let $btn = $st($this).find('button[name="synonym_btn"]');
-    let $btnVal = $btn.html();
         
     function resolveBtn(){
-        $btn.html($btnVal);
+        $btn.html("Check Synonyms");
         $btn.attr('disabled', false);
     }
 
@@ -94,6 +109,8 @@ $st('form.syn-form').on('submit', function($e) {
                     beforeSend: function() {
                         $btn.html('Checking...');
                         $btn.attr('disabled', true);
+                        //close every other toastr
+                        toastr.clear();
                     },
                     success: function ($res) {
                         if (!$res.success == true) {
