@@ -137,4 +137,6 @@ $st('form.syn-form').on('submit', function($e) {
 $st('.clear').on('click', function() {
     $st('.screen').html('');
     $st('.screen').append('Results Here');
+    $st('input#word').val('');
+    $st('input#word_no').val('');
 });
