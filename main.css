@@ -1,3 +1,8 @@
+/**
+ * Author: Daniel Botchway
+ * GitHub: https://github.com/BhoiDanny
+ */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +16,13 @@
     --trans-2: rgba(255, 255, 255, 0.5);
 }
 
-button {
+.button {
     background: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color));
     border-color: var(--secondary-color) !important;
+    margin-top: 10px;
+}
+
+.m-t-10 {
     margin-top: 10px;
 }
 
@@ -23,6 +32,15 @@ button:hover {
 
 button:focus {
     box-shadow: none !important;
+}
+
+.checkbox {
+    margin-top: 20px;
+    float: left
+}
+
+.checkbox .custom-control-label {
+    font-weight: normal;
 }
 
 main {
@@ -106,5 +124,5 @@ label {
 
 .screen ul {
     list-style: circle;
-    padding: 20px;
+    padding: 0 20px 20px;
 }

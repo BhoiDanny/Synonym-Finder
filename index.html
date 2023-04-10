@@ -23,6 +23,7 @@
     <title>Synonym - Finder</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <h1 class="font-weight-light text-center p-3">Synonym Finder</h1>
             </div>
             <div class="inputs p-3">
-                <form action="" method="post">
+                <form class="syn-form" action="https://api.sannytech.me/syn-finder" method="GET">
                     <div class="form-row justify-content-center">
                         <div class="row"> 
                             <div class="col-md-6">
@@ -41,22 +42,28 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="word_no">No. of Words</label>
-                                <input type="number" min="0" name="word_no" id="word_no" class="input" placeholder="Enter a number">
+                                <input type="number" min="0" name="word_no" id="word_no" class="input" placeholder="No of words to display">
                             </div>
                         </div>
                     </div>
                     <div class="screen">
-                        Result Here
-                        <ul>
-                            <li>Word 1</li>
-                            <li>Word 2</li>
-                            <li>Word 3</li>
-                            <li>Word 4</li>
-                            <li>Word 5</li>
-                        </ul>
+                        Results Here
                     </div>
                     <div class="text-right">
-                        <button name="synonym_btn" class="btn btn-primary button" type="submit">Check Synonym</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="checkbox">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input auto-search" id="auto">
+                                        <label class="custom-control-label" for="auto">Automatic Search</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button name="synonym_btn" class="btn btn-primary button" type="submit">Check Synonym</button>
+                                <button class="btn btn-danger m-t-10 clear" type="button">Clear</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -65,7 +72,7 @@
         </section>
         <footer class="mt-4">
             <p class="text-center text-white">
-                Made with <span class="text-danger">&hearts;</span> by <a href="https://github.com/BhoiDanny" target="_blank">Daniel Botchway</a>
+                Made with <span class="text-danger">&hearts;</span> by <a class="text-white" href="https://github.com/BhoiDanny" target="_blank">Daniel Botchway</a>
             </p>
         </footer>
     </main>
@@ -74,5 +81,7 @@
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
