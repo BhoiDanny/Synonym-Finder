@@ -60,6 +60,12 @@ main {
     z-index: 3;
 }
 
+@media screen and (max-width: 768px) {
+    .cover {
+        width: 90%;
+    }
+}
+
 .shape-1,.shape-2 {
     background: white;
     height: 10rem;
@@ -81,6 +87,18 @@ main {
     right: 15%;
     bottom: 10%;
     background: linear-gradient(to right bottom, var(--trans-2), var(--trans-1));
+}
+
+@media screen and (max-width: 768px) {
+    .shape-1 {
+        top: 2%;
+        left: 2%;
+    }
+
+    .shape-2 {
+        right: 2%;
+        bottom: 2%;
+    }
 }
 
 .head h1 {
