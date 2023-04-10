@@ -87,6 +87,7 @@ $st('form.syn-form').on('submit', function($e) {
     function resolveBtn(){
         $btn.html("Check Synonyms");
         $btn.attr('disabled', false);
+        toastr.clear();
     }
 
     if($word == "") {
@@ -110,7 +111,7 @@ $st('form.syn-form').on('submit', function($e) {
                         $btn.html('Checking...');
                         $btn.attr('disabled', true);
                         //close every other toastr
-                        toastr.clear();
+                        
                     },
                     success: function ($res) {
                         if (!$res.success == true) {
