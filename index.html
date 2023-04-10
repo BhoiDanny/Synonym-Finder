@@ -26,38 +26,53 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="text-center p-4 text-uppercase">
-        <h3>Synonym Finder</h3>
-    </header>
-    <main>
-        <section class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="input">
-                        <form action="" method="" class="form">
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <label for="word">Word</label>
-                                    <input type="text" name="word" id="word" class="form-control" placeholder="Enter a word">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="no_of_results">No. of Results</label>
-                                    <input type="number" name="no_of_results" id="no_of_results" class="form-control" placeholder="Enter a number">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="result-screen"></div>
-                </div>
+    <main class="d-flex flex-column justify-content-center pt-5">
+        <section class="cover container">
+            <div class="head">
+                <h1 class="font-weight-light text-center p-3">Synonym Finder</h1>
             </div>
+            <div class="inputs p-3">
+                <form action="" method="post">
+                    <div class="form-row justify-content-center">
+                        <div class="row"> 
+                            <div class="col-md-6">
+                                <label for="word">Word</label>
+                                <input type="text" name="word" id="word" class="input" placeholder="Enter a word">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="word_no">No. of Words</label>
+                                <input type="number" min="0" name="word_no" id="word_no" class="input" placeholder="Enter a number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen">
+                        Result Here
+                        <ul>
+                            <li>Word 1</li>
+                            <li>Word 2</li>
+                            <li>Word 3</li>
+                            <li>Word 4</li>
+                            <li>Word 5</li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <button name="synonym_btn" class="btn btn-primary button" type="submit">Check Synonym</button>
+                    </div>
+                </form>
+            </div>
+            
+            
         </section>
+        <footer class="mt-4">
+            <p class="text-center text-white">
+                Made with <span class="text-danger">&hearts;</span> by <a href="https://github.com/BhoiDanny" target="_blank">Daniel Botchway</a>
+            </p>
+        </footer>
     </main>
-    <footer>
-        <p class="text-center">
-            Made with <span class="text-danger">&hearts;</span> by <a href="https://github.com/BhoiDanny" target="_blank">Daniel Botchway</a>
-        </p>
-    </footer>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
 
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 </html>
