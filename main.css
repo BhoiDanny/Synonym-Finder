@@ -90,14 +90,8 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-    .shape-1 {
-        top: 2%;
-        left: 2%;
-    }
-
-    .shape-2 {
-        right: 2%;
-        bottom: 2%;
+    .shape-1,.shape-2 {
+        display: none;
     }
 }
 
